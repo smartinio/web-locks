@@ -3,9 +3,8 @@ export * from "../src/sleep";
 export * from "../src/polyfill";
 
 export function createWebLocksInstance() {
-  const webLocks = new LockManager();
-  window.localStorage.removeItem("heldLockSet");
-  return webLocks;
+  localStorage.clear();
+  return new LockManager();
 }
 
 export const neverSettledPromise = new Promise((resolve) => {
