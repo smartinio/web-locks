@@ -1,5 +1,4 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
 } from "./helpers";
@@ -20,8 +19,6 @@ async function testCallBackArg(arg: any) {
 }
 
 describe("Returned Promise rejects if callback throws asynchronously", () => {
-  beforeEachHandle();
-
   test("navigator.locks.request requires a name and a callback", async () => {
     const webLocks = createWebLocksInstance();
     try {

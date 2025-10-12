@@ -1,13 +1,10 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
   sleep,
 } from "./helpers";
 
 describe("Web Locks API: Lock held until callback result resolves", () => {
-  beforeEachHandle();
-
   test("callback's result is promisified if not async", async () => {
     const webLocks = createWebLocksInstance();
     const sourceName = generateRandomId();

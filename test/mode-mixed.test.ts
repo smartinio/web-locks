@@ -1,8 +1,6 @@
-import { beforeEachHandle, createWebLocksInstance } from "./helpers";
+import { createWebLocksInstance } from "./helpers";
 
 describe("Web Locks API: Mixed Modes", () => {
-  beforeEachHandle();
-
   test("Lock requests are granted in order", async () => {
     const webLocks = createWebLocksInstance();
 

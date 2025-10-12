@@ -1,13 +1,10 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
   neverSettledPromise,
 } from "./helpers";
 
 describe("Web Locks API: steal option", () => {
-  beforeEachHandle();
-
   test("Lock available", async () => {
     const webLocks = createWebLocksInstance();
     const sourceName = generateRandomId();

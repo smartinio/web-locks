@@ -1,5 +1,4 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
   LockInfo,
@@ -15,8 +14,6 @@ function clients(list: LockInfo[], name: string) {
 }
 
 describe("Web Locks API: navigator.locks.query method", () => {
-  beforeEachHandle();
-
   test("query() returns dictionaries with expected properties", async () => {
     const webLocks = createWebLocksInstance();
     const sourceName = generateRandomId();
