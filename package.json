@@ -48,7 +48,10 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup/afterEnv.ts"
+    ]
   },
   "engines": {
     "node": ">=20.x <=24.x"

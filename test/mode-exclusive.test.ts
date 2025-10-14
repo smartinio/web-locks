@@ -1,8 +1,6 @@
-import { beforeEachHandle, createWebLocksInstance } from "./helpers";
+import { createWebLocksInstance } from "./helpers";
 
 describe("test suite of Web Locks API: mode-exclusive", () => {
-  beforeEachHandle();
-
   test("Lock requests are granted in order", async () => {
     const granted: Number[] = [];
     function log_grant(n: number) {

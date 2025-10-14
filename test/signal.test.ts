@@ -1,5 +1,4 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
 } from "./helpers";
@@ -13,8 +12,6 @@ function makePromiseAndResolveFunc(): any[] {
 }
 
 describe("Web Locks API: AbortSignal integration", () => {
-  beforeEachHandle();
-
   test("The signal option must be an AbortSignal", async () => {
     // These cases should not work:
     for (const signal of [

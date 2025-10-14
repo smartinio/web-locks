@@ -1,13 +1,10 @@
 import {
-  beforeEachHandle,
   createWebLocksInstance,
   generateRandomId,
   sleep,
 } from "./helpers";
 
 describe("Web Locks API: ifAvailable option", () => {
-  beforeEachHandle();
-
   test("Lock request with ifAvailable - lock available", async () => {
     const webLocks = createWebLocksInstance();
     const sourceName = generateRandomId();

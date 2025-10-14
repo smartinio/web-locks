@@ -1,8 +1,6 @@
-import { beforeEachHandle, createWebLocksInstance } from "./helpers";
+import { createWebLocksInstance } from "./helpers";
 
 describe("Web Locks API: navigator.locks.query method - no locks held", () => {
-  beforeEachHandle();
-
   test("query() returns dictionary with empty arrays when no locks are held", async () => {
     const webLocks = createWebLocksInstance();
 

@@ -1,4 +1,4 @@
-import { beforeEachHandle, createWebLocksInstance } from "./helpers";
+import { createWebLocksInstance } from "./helpers";
 
 function code_points(s: string) {
   return [...s]
@@ -7,8 +7,6 @@ function code_points(s: string) {
 }
 
 describe("Web Locks API: Resources DOMString edge cases", () => {
-  beforeEachHandle();
-
   [
     "", // Empty strings
     "abc\x00def", // Embedded NUL

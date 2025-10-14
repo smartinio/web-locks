@@ -1,8 +1,6 @@
-import { beforeEachHandle, createWebLocksInstance } from "./helpers";
+import { createWebLocksInstance } from "./helpers";
 
 describe("Web Locks API: Lock Attributes", () => {
-  beforeEachHandle();
-
   test("Lock attributes reflect requested properties (exclusive)", async () => {
     const webLocks = createWebLocksInstance();
 
